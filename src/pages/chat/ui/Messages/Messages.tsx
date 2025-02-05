@@ -16,9 +16,10 @@ export const Messages: FC = () => {
   const messageBlock: RefObject<HTMLDivElement> = useRef(null)
   const messages: IMessages[] = useAppSelector(state => state.chat.messages)
   const [message, setMessageValue] = useState<string>('')
+   
   const [lastVisible, setLastVisible] = useState<DocumentData>([])
   const [loading, setLoading] = useState<boolean>(true)
-
+  console.log(lastVisible)
   // const fetchMessages = async (id: string) => {
   //   const messages: IMessages[] = []
   //   const next = query(collection(getFirestore(), "message", id, "messages"),
@@ -76,6 +77,9 @@ export const Messages: FC = () => {
 
                 messages.push({
                   messageText: message.messageText,
+                  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+                  // @ts-expect-error
+                  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
                   sentAt: message.sentAt.seconds,
                   sentBy: message.sentBy,
                   name: message.name
