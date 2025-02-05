@@ -1,0 +1,34 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ],
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "entities/*": [
+        "entities/*"
+      ],
+      "pages/*": [
+        "pages/*"
+      ],
+      "shared/*": [
+        "shared/*"
+      ],
+      "app/*": [
+        "app/*"
+      ],
+      "features/*": [
+        "features/*"
+      ],
+      "widgets/*": [
+        "widgets/*"
+      ]
+    }
+  }
+}
